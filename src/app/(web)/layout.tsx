@@ -1,11 +1,11 @@
 import { Header } from '@/app/(web)/_components/header'
 import { Container } from '@/components/container'
 
-export default function HomePage() {
+export default function WebLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<Container>
+		<Container className="flex h-screen flex-col">
 			<Header />
-			<h1 className="text-white">Home</h1>
+			{children}
 		</Container>
 	)
 }
