@@ -1,8 +1,16 @@
+'use client'
+
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 export function NavAuth() {
+	function handleRegister() {
+		redirect('/register')
+	}
+
 	return (
-		<div className="flex justify-end gap-4">
+		<div className="flex items-center justify-end gap-4">
 			<Link
 				href="/login"
 				className="font-medium text-base transition-colors duration-300 ease-linear dark:text-neutral-50 dark:hover:text-neutral-400"
@@ -10,12 +18,7 @@ export function NavAuth() {
 				Login
 			</Link>
 
-			<Link
-				href="/register"
-				className="font-medium text-base transition-colors duration-300 ease-linear dark:text-neutral-50 dark:hover:text-neutral-400"
-			>
-				Registre
-			</Link>
+			<Button onClick={handleRegister}>Register</Button>
 		</div>
 	)
 }
