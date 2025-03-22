@@ -1,3 +1,6 @@
 {
-	"extends": ["@tc96/biome-config"]
+	"extends": ["@tc96/biome-config"],
+	"files": {
+		"ignore": ["node_modules", ".next", "dist", "public"]
+	}
 }

@@ -1,9 +1,5 @@
-import { Container } from '@/components/container'
+import { LoginForm } from '@/components/login-form'
 
 export default function LoginPage() {
-	return (
-		<Container>
-			<h1 className="text-white">Login</h1>
-		</Container>
-	)
+	return <LoginForm />
 }
